@@ -1,5 +1,5 @@
 'use client'
-import './globals.css'
+import '@/app/globals.css'
 import Header from '@/components/header'
 import { motion, AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
@@ -21,7 +21,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-black text-white min-h-screen overflow-x-hidden">
-
         <AnimatePresence mode="wait">
           <motion.main
             key={pathname}
@@ -37,6 +36,7 @@ export default function RootLayout({
             }}
             className="min-h-screen"
           >
+            <Header />
             {children}
           </motion.main>
         </AnimatePresence>
